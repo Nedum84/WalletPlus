@@ -28,5 +28,5 @@ jobs:
         with:
           node-version: '14'
       - run: CI=true npm run test
-      env:
+        env:
           CI: true
