@@ -4,11 +4,6 @@ import { Points } from "./points.model";
 import { Wallet } from "./wallet.model";
 import { sequelize } from "./db.con";
 
-(async () => {
-  // await sequelize.sync({ force: true });
-  // await sequelize.sync({ alter: true });
-})();
-
 export const runRelationship = async () => {
   await sequelize.sync({ force: true });
   //--> Users
