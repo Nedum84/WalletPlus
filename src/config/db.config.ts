@@ -1,16 +1,16 @@
+import path from "path";
 import config from "./config";
 
-// database config for either development or production
 require("dotenv").config();
 
 export default {
   development: {
-    dbname: process.env.DB_NAME!,
-    username: process.env.DB_USERNAME!,
-    password: process.env.DB_PASSWORD!,
-    host: process.env.DB_HOST || "localhost",
-    dialect: "postgres",
-    port: Number(process.env.DB_PORT) || 5432,
+    username: "root",
+    password: "root",
+    host: "0.0.0.0",
+    dialect: "sqlite",
+    storage: path.join(__dirname, "..", "database/wallet_plus.sqlite"),
+    // port: Number(process.env.DB_PORT) || 5432,
     pool: {
       max: 5,
       min: 0,
@@ -19,13 +19,13 @@ export default {
     },
   },
   test: {
-    dbname: process.env.DB_TEST_NAME,
-    username: process.env.DB_USERNAME,
-    password: process.env.DB_PASSWORD,
-    host: process.env.DB_HOST,
-    dialect: "postgres",
+    username: "root",
+    password: "root",
+    host: "0.0.0.0",
+    dialect: "sqlite",
     logging: false,
-    port: Number(process.env.DB_PORT_TEST) || 5432,
+    storage: path.join(__dirname, "..", "database/wallet_plus_test.sqlite"),
+    // port: Number(process.env.DB_PORT_TEST) || 5432,
     pool: {
       max: 5,
       min: 0,
@@ -34,11 +34,14 @@ export default {
     },
   },
   production: {
-    dbname: process.env.DB_NAME,
-    username: process.env.DB_USERNAME,
-    password: process.env.DB_PASSWORD,
-    host: process.env.DB_HOST,
-    dialect: "postgres",
+    // dbname: process.env.DB_NAME,
+    // username: process.env.DB_USERNAME,
+    // password: process.env.DB_PASSWORD,
+    // host: process.env.DB_HOST,
+    username: "root",
+    password: "root",
+    host: "0.0.0.0",
+    dialect: "sqlite",
     logging: false,
     pool: {
       max: 5,
