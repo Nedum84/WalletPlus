@@ -1,0 +1,593 @@
+{
+	"info": {
+		"_postman_id": "8f91a618-d88f-42d9-bcfc-80800bbe28f2",
+		"name": "WalletPlus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\":\"Nelson\",\n    \"last_name\":\"Odo\",\n    \"email\":\"nellyn@gmail.com\",\n    \"phone\":\"08089121330\"\n}"
+						},
+						"url": {
+							"raw": "{{ROOT}}/auth/signup",
+							"host": [
+								"{{ROOT}}"
+							],
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "201",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"first_name\":\"Nelson\",\n    \"last_name\":\"Odo\",\n    \"email\":\"nellyn@gmail.com\",\n    \"phone\":\"08089121330\"\n}"
+								},
+								"url": {
+									"raw": "{{ROOT}}/auth/signup",
+									"host": [
+										"{{ROOT}}"
+									],
+									"path": [
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "913"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"391-JScRdNAWZgDtd9fv48DTiA0vxN4\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 16 Sep 2021 23:11:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 201,\n    \"success\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"user\": {\n            \"version\": 0,\n            \"user_id\": 3,\n            \"first_name\": \"Nelson\",\n            \"last_name\": \"Odo\",\n            \"email\": \"nellyn@gmail.com\",\n            \"phone\": \"08089121330\",\n            \"uuid\": \"99ead63c-9370-4e82-aa2a-4bcf7f916377\",\n            \"updatedAt\": \"2021-09-16T23:11:49.276Z\",\n            \"createdAt\": \"2021-09-16T23:11:49.276Z\"\n        },\n        \"tokens\": {\n            \"access\": {\n                \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJfaWQiOjMsInV1aWQiOiI5OWVhZDYzYy05MzcwLTRlODItYWEyYS00YmNmN2Y5MTYzNzcifSwiaWF0IjoxNjMxODMzOTA5LCJleHAiOjE2MzE4NDI5MDksInR5cGUiOiJhY2Nlc3MifQ.cvKpwocSM92ok1iSJAb4qxoUdnkJOXcezSqaE1p4j3g\",\n                \"expires\": \"2021-09-17T01:41:49.282Z\"\n            },\n            \"refresh\": {\n                \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJfaWQiOjMsInV1aWQiOiI5OWVhZDYzYy05MzcwLTRlODItYWEyYS00YmNmN2Y5MTYzNzcifSwiaWF0IjoxNjMxODMzOTA5LCJleHAiOjE2Mzk2MDk5MDksInR5cGUiOiJyZWZyZXNoIn0.mpug8zJPjjeBN2-kmXpehvI-Ak5rjr0EeEs0zjYqA7s\",\n                \"expires\": \"2021-12-15T23:11:49.283Z\"\n            }\n        }\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Transactions",
+			"item": [
+				{
+					"name": "Add money to wallet",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"amount\":2000\n}"
+						},
+						"url": {
+							"raw": "{{ROOT}}/addmoney",
+							"host": [
+								"{{ROOT}}"
+							],
+							"path": [
+								"addmoney"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"amount\":2000\n}"
+								},
+								"url": {
+									"raw": "{{ROOT}}/addmoney",
+									"host": [
+										"{{ROOT}}"
+									],
+									"path": [
+										"addmoney"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "242"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f2-T6VBm77bAUrGx0tcGzL8oiLkdgU\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 16 Sep 2021 23:13:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"success\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"wallet\": {\n            \"version\": 0,\n            \"id\": 16,\n            \"amount\": 2000,\n            \"transaction_ref\": \"GojrF6WtBX\",\n            \"user_id\": 3,\n            \"updatedAt\": \"2021-09-16T23:13:21.614Z\",\n            \"createdAt\": \"2021-09-16T23:13:21.614Z\"\n        },\n        \"point_earn\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Send money to User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"to\":11,\n    \"amount\":1000\n}"
+						},
+						"url": {
+							"raw": "{{ROOT}}/sendmoney",
+							"host": [
+								"{{ROOT}}"
+							],
+							"path": [
+								"sendmoney"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"to\":321,\n    \"amount\":1000\n}"
+								},
+								"url": {
+									"raw": "{{ROOT}}/sendmoney",
+									"host": [
+										"{{ROOT}}"
+									],
+									"path": [
+										"sendmoney"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "198"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c6-HTv26IDKkeRXd7aGOiIJiV2BYOQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 16 Sep 2021 23:13:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"success\": true,\n    \"message\": \"success\",\n    \"data\": {\n        \"transfer\": {\n            \"version\": 0,\n            \"id\": 7,\n            \"amount\": 1000,\n            \"from\": 3,\n            \"to\": 1,\n            \"updatedAt\": \"2021-09-16T23:13:30.115Z\",\n            \"createdAt\": \"2021-09-16T23:13:30.115Z\"\n        }\n    }\n}"
+						},
+						{
+							"name": "400",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"to\":11,\n    \"amount\":1000\n}"
+								},
+								"url": {
+									"raw": "{{ROOT}}/sendmoney",
+									"host": [
+										"{{ROOT}}"
+									],
+									"path": [
+										"sendmoney"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "57"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"39-4YcIU7te8kuXAvH5c3mTw9Mwoww\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 16 Sep 2021 23:14:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 404,\n    \"success\": false,\n    \"message\": \"User not found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get transactions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"amount\":20100\n}"
+						},
+						"url": {
+							"raw": "{{ROOT}}/transaction",
+							"host": [
+								"{{ROOT}}"
+							],
+							"path": [
+								"transaction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Balance",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"amount\":20100\n}"
+						},
+						"url": {
+							"raw": "{{ROOT}}/balance",
+							"host": [
+								"{{ROOT}}"
+							],
+							"path": [
+								"balance"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{TOKEN}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "ROOT",
+			"value": "http://localhost:8000"
+		},
+		{
+			"key": "TOKEN",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJfaWQiOjMsInV1aWQiOiI5OWVhZDYzYy05MzcwLTRlODItYWEyYS00YmNmN2Y5MTYzNzcifSwiaWF0IjoxNjMxODMzOTA5LCJleHAiOjE2MzE4NDI5MDksInR5cGUiOiJhY2Nlc3MifQ.cvKpwocSM92ok1iSJAb4qxoUdnkJOXcezSqaE1p4j3g"
+		}
+	]
+}
